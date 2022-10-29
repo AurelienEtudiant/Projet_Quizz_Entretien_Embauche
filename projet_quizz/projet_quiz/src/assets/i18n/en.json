@@ -1,0 +1,94 @@
+{
+  "app": {
+    "evaluation": "Evaluation",
+    "entrainement": "Training",
+    "survie": "Survival"
+  },
+
+  "header": {
+    "title": "Job Interview Quiz"
+  },
+
+  "evaluation": {
+    "regle": "Rules",
+    "difficulte": "Difficulty",
+    "facile": "Easy",
+    "moyen": "Normal",
+    "difficile": "Hard",
+    "lancer": "Next",
+    "arreter": "Stop",
+    "descRegle": "This game mode is played with 2 to 10 players. For each game each player will have a user-defined number of lives before starting the game. Players answer a question in turn. Once the 10 lives have passed you lose and you are therefore eliminated. The winner is the person who will still be in play when everyone else has 0 lives. Each wrong answer takes a life away from you. If you answer correctly, it's up to the next player to answer.",
+    "categories": "Categories",
+    "num_quest" : "Question Number : ",
+    "dev web" : "Web Developper front-end",
+    "dev web back" : "Web Developper back-end",
+    "angular" : "Angular Developper",
+    "Git" : "Git",
+    "reseaux" : "Networks",
+    "poo" : "Object-Oriented Programming",
+    "diff1":"Easy",
+    "diff2":"Medium",
+    "diff3":"Hard",
+    "menu":"Reception",
+    "sc":"You obtained :"
+  },
+
+  "entrainement": {
+    "regle": "Rules",
+    "difficulte": "Difficulty",
+    "facile": "Easy",
+    "moyen": "Normal",
+    "difficile": "Hard",
+    "lancer": "Next",
+    "arreter": "Stop",
+    "descRegle": "In this game mode you can practice. Choose a difficulty as well as a theme to tackle, finally press launch and questions will scroll by(10). Once you have answered the various questions orally or on a sheet alongside, post the answers.",
+    "categories": "Categories",
+    "dev web" : "Web Developper front-end",
+    "dev web back" : "Web Developper back-end",
+    "angular" : "Angular Developper",
+    "Git" : "Git",
+    "reseaux" : "Networks",
+    "poo" : "Object-Oriented Programming",
+    "diff1":"Easy",
+    "diff2":"Medium",
+    "diff3":"Hard",
+    "menu":"Reception",
+    "sc":"You obtained :",
+    "num_quest" : "Question Number : ",
+    "aff":"Show answer",
+    "suiv":"Next question",
+    "temriner":"You have completed your training !"
+  },
+
+  "survie": {
+    "regle": "Rules",
+    "difficulte": "Difficulty",
+    "facile": "Easy",
+    "moyen": "Normal",
+    "difficile": "Hard",
+    "suivant": "Next",
+    "arreter": "Stop",
+    "nbjoueur":"Number of players",
+    "inputNbJoueur": "Enter the number of players",
+    "descRegle": "This game mode is played with 2 to 10 players. For each game you will have a total of 10 lives. You will have to answer a series of 50 questions. You win the game if your number of lives does not reach a negative number of lives. You lose if you answer a question incorrectly when you have 0 life left. For each question only 1 answer is expected.",
+    "categories": "Categories",
+    "dev web" : "Web Developper front-end",
+    "dev web back" : "Web Developper back-end",
+    "angular" : "Angular Developper",
+    "Git" : "Git",
+    "reseaux" : "Networks",
+    "poo" : "Object-Oriented Programming",
+    "diff1":"Easy",
+    "diff2":"Medium",
+    "diff3":"Hard",
+    "menu":"Reception",
+    "sc":"You obtained :",
+    "num_quest" : "Question Number : ",
+    "perdu":"You loose",
+    "gagner":"Congrats, you win !",
+    "j":"PLayer",
+    "e":"éliminated",
+    "inputNbVie":"Enter the number of lives for each player"
+
+  }
+}

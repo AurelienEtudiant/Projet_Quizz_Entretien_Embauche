@@ -1,0 +1,103 @@
+{
+  "app": {
+    "evaluation": "Évaluation",
+    "entrainement": "Entraînement",
+    "survie": "Survie"
+  },
+
+  "header": {
+    "title": "Quizz Entretien d'Embauche"
+  },
+
+  "evaluation": {
+    "regle": "Règles",
+    "difficulte": "Difficulté",
+    "facile": "Facile",
+    "moyen": "Moyen",
+    "difficile": "Difficile",
+    "lancer": "Lancer",
+    "arreter": "Arrêter",
+    "descRegle":"Dans ce mode vous simulerez un entretient d'embauche technique. Il y aura un joueur(la personne qui passerait l'entretient) et une personne qui va poser les questions(MJ/recruteur). Une fois que le MJ aura posé la question et que le joueur aura répondu le MJ devra noter la réponse du joueur, biensur en se mettant à la place du recruteur et donc noter la personne qui passerait un entretient comme un recruteur le ferait. La note maximale à une question est de 5pts et donc le but du jeu pour le joueur est d'approcher le plus possible d'un score de 50 pts (10 questions à 5 points max). Sélectionnez la difficulté et la catégorie avant d'appuyer sur Lancer pour démarrer la simulation, Bon Courage.",
+    "categories": "Catégories",
+    "num_quest" : "N° de Question : ",
+    "dev web" : "Développeur Web front-end",
+    "dev web back" : "Développeur Web back-end",
+    "angular" : "Développeur Angular",
+    "Git" : "Git",
+    "reseaux" : "Réseaux",
+    "poo" : "Programmation orientée objet",
+    "suivant" : "Suivant",
+    "diff1":"Simple",
+    "diff2":"Moyen",
+    "diff3":"Difficile",
+    "menu":"Accueil",
+    "sc":"Vous avez obtenu :"
+
+
+  },
+
+  "entrainement": {
+    "regle": "Règles",
+    "difficulte": "Difficulté",
+    "facile": "Facile",
+    "moyen": "Moyen",
+    "difficile": "Difficile",
+    "lancer": "Lancer",
+    "arreter": "Arrêter",
+    "descRegle": "Dans ce mode de jeu vous pourrez vous entrainer. Choisissez une difficultée ainsi qu'un thème à aborder, enfin appuyez sur lancer et des questions défileront(10). Une fois que vous aurez répondez aux différentes questions à l'oral ou sur une feuille à côté, affichez les réponses.",
+    "categories": "Catégories",
+    "dev web" : "Développeur Web front-end",
+    "dev web back" : "Développeur Web back-end",
+    "angular" : "Développeur Angular",
+    "Git" : "Git",
+    "reseaux" : "Réseaux",
+    "poo" : "Programmation orientée objet",
+    "suivant" : "Suivant",
+    "diff1":"Simple",
+    "diff2":"Moyen",
+    "diff3":"Difficile",
+    "menu":"Accueil",
+    "sc":"Vous avez obtenu :",
+    "num_quest" : "N° de Question : ",
+    "aff":"Afficher la réponse",
+    "suiv":"Question suivante",
+    "terminer":"Vous avez terminé votre entraînement !"
+    
+
+  },
+
+  "survie": {
+    "regle": "Règles",
+    "difficulte": "Difficulté",
+    "facile": "Facile",
+    "moyen": "Moyen",
+    "difficile": "Difficile",
+    "lancer": "Lancer",
+    "arreter": "Arrêter",
+    "nbjoueur":"Nombre de joueur",
+    "inputNbJoueur": "Entrer le nombre de joueur",
+    "descRegle": "Ce mode de jeu se joue de 2 à 10 joueurs. Pour chaque partie chaque joueur aura un nombre de vies définies par l'utilisateur avant de lancer le jeu. Les joueurs répondent à une question tour à tour. Une fois les 10 vies écoulés vous perdez et vous êtes donc éliminés. Le gagnant est la personne qui sera encore en jeu lorsque tous les autres auront 0 vie. Chaque mauvaise réponse vous retire une vie. Si vous répondez correctement c'est au joueur suivant de répondre.",
+    "categories": "Catégories",
+    "dev web" : "Développeur Web front-end",
+    "dev web back" : "Développeur Web back-end",
+    "angular" : "Développeur Angular",
+    "Git" : "Git",
+    "reseaux" : "Réseaux",
+    "poo" : "Programmation orientée objet",
+    "suivant" : "Suivant",
+    "diff1":"Simple",
+    "diff2":"Moyen",
+    "diff3":"Difficile",
+    "menu":"Accueil",
+    "sc":"Vous avez obtenu :",
+    "num_quest" : "N° de Question : ",
+    "perdu":"Vous avez perdu",
+    "gagner":"Bravo, vous avez gagné !",
+    "j":"Joueur",
+    "e":"éliminé",
+    "inputNbVie":"Entrez le nombre de vies de chaque joueur"
+
+
+  }
+ 
+}

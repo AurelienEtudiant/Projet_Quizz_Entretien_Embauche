@@ -1,0 +1,70 @@
+<p>gestion-questions-reponses works!</p>
+<app-header></app-header>
+<h1> Voici les differentes questions/réponses: </h1>
+<div id="tab-bot">
+  <table>
+    <thead>
+    <tr>
+      <th colspan="8">Tableaux questions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>id question</td>
+      <td>label fr</td>
+      <td>label en</td>
+      <td>id catégorie</td>
+      <td>id difficulté</td>
+      <td>mode évaluation</td>
+      <td>mode entrainement</td>
+      <td>mode survie</td>
+    </tr>
+    <tr *ngFor="let cate of question">
+      <td>{{cate.id_question}}</td>
+      <td>{{cate.label_fr}}</td>
+      <td>{{cate.label_en}}</td>
+      <td>{{cate.id_categorie}}</td>
+      <td>{{cate.id_difficulte}}</td>
+      <td>{{cate.eval_mode}}</td>
+      <td>{{cate.training_mode}}</td>
+      <td>{{cate.survival_mode}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div id="ajoutTheme">
+  <h2> Ajouter une question: </h2>
+  <form #QuestionForm="ngForm" role="form" (ngSubmit)="onSubmitQuestions()">
+    <div class="form-group">
+      <input type="number" ngModel name="id_question" placeholder="Id question">
+      <input type="text" ngModel name="label_fr" placeholder="label fr">
+      <input type="text" ngModel name="label_en" placeholder="label en">
+      <input  type="number" ngModel name="id_categorie" placeholder="id catégorie">
+      <input  type="number" ngModel name="id_difficulte" placeholder="id difficulté">
+      <input  type="text" ngModel name="eval_mode" placeholder="mode evaluation(true/false)">
+      <input  type="text" ngModel name="training_mode" placeholder="mode entrainement(true/false)">
+      <input  type="text" ngModel name="survival_mode" placeholder="mode survie(true/false)">
+      <button type="submit" [disabled]="!QuestionForm.form.valid">Submit</button>
+    </div>
+  </form>
+
+  <h2> Modification d'une question: </h2>
+  <form #QuestionFormpatch="ngForm" role="form" (ngSubmit)="onPatch(QuestionFormpatch.value)">
+    <div class="form-group">
+      <input type="number" ngModel name="id_question" placeholder="Id question">
+      <input type="text" ngModel name="label_fr" placeholder="label fr">
+      <input type="text" ngModel name="label_en" placeholder="label en">
+      <input  type="number" ngModel name="id_categorie" placeholder="id catégorie">
+      <input  type="number" ngModel name="id_difficulte" placeholder="id difficulté">
+      <input  type="boolean" ngModel name="eval_mode" placeholder="mode evaluation(true/false)">
+      <input  type="boolean" ngModel name="training_mode" placeholder="mode entrainement(true/false)">
+      <input  type="boolean" ngModel name="survival_mode" placeholder="mode survie(true/false)">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</div>
+
+
+<app-footer></app-footer>
+

@@ -1,0 +1,26 @@
+<app-header></app-header>
+<section class="menu">
+  <div class="liste-menu">
+    <a routerLink="/evaluation">
+      <div class="evaluation">
+        <img src="assets/images/checklist.png" alt="checklist.png">
+        <h2>{{'app.evaluation' | translate}}</h2>
+      </div>
+    </a>
+    <a routerLink="/entrainement">
+      <div class="entrainement">
+        <img src="assets/images/presentation.png" alt="presentation.png">
+        <h2>{{'app.entrainement' | translate}}</h2>
+      </div>
+    </a>
+    <a routerLink="/survie">
+      <div class="survie">
+        <img src="assets/images/swords.png" alt="swords.png">
+        <h2>{{'app.survie' | translate}}</h2>
+      </div>
+    </a>
+  </div>
+  <a href="#" id="lien" ngx-translate (click)="changeLanguage()"><img class="flag" id="flag" src="assets/images/{{name}}.png" alt="english.png"></a>
+
+</section>
+<app-footer></app-footer>

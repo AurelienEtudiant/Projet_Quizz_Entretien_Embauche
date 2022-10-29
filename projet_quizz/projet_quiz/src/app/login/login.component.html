@@ -1,0 +1,26 @@
+<app-header></app-header>
+    <div class="form-log">
+      <div class="bg-form">
+        <div class="title-log">
+          <h2>Login</h2>
+          <p><em>{{message}}</em></p>
+        </div>
+        <form #loginForm="ngForm">
+          <div class="log-inp">
+            <label for="name">E-mail</label>
+            <input type="text" class="input-log" id="name" [(ngModel)]="email" name="name" required>
+          </div>
+          <div class="log-inp">
+            <label for="password">Mot de passe</label>
+            <input type="password" class="input-log" id="password" [(ngModel)]="password" name="password" required>
+          </div>
+        </form>
+        <div class="btn-co">
+          <a (click)="login()" class="waves-effect waves-light btn"  *ngIf="!auth.isLoggedIn">Se connecter</a>
+          <a (click)="logout()" *ngIf="auth.isLoggedIn">Se déconnecter</a>
+        </div>
+      </div>
+
+    </div>
+<app-footer></app-footer>
+

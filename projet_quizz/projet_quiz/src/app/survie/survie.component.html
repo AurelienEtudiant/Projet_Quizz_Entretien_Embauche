@@ -1,0 +1,129 @@
+<app-header></app-header>
+
+<section class="modeSurvie">
+  <div class="divRegle" *ngIf="toDisplay">
+    <h1>{{'survie.regle' | translate}}:</h1>
+    <p class ="regle">
+      {{'survie.descRegle' | translate}}
+    </p>
+
+    <h2>{{'survie.difficulte' | translate}} :</h2>
+    <ul>
+      <li>
+        <input  (click)="toDisplayButton = true" (click)='cliquer1(1)' type ="radio" name="dif" id="facile">
+        <label for="facile" class="loadcheck">
+          <span class="entypo-cancel">&#10008;</span>
+          <span class="load"></span>
+          <span class="load"></span>
+          <span class="load"></span>
+          <span class="load"></span>
+          <span class="load"></span>
+          <span class="entypo-check">&#10004;</span>
+        </label>
+        <label for="poo" >{{ 'survie.diff1' | translate }}</label>
+        
+      </li>
+
+      <li>
+        <input (click)="toDisplayButton = true" (click)='cliquer1(2)' type="radio" name="dif" id="moyen">
+        <label for="moyen" class="loadcheck">
+          <span class="entypo-cancel">&#10008;</span>
+          <span class="load"></span>
+          <span class="load"></span>
+          <span class="load"></span>
+          <span class="load"></span>
+          <span class="load"></span>
+          <span class="entypo-check">&#10004;</span>
+        </label>
+        <label for="poo" >{{'survie.diff2' | translate }}</label>
+        
+      </li>
+
+      <li>
+        <input (click)="toDisplayButton = true" (click)='cliquer1(3)' type="radio" name="dif" id="difficile">
+        <label for="difficile" class="loadcheck">
+          <span class="entypo-cancel">&#10008;</span> 
+          <span class="load"></span>
+          <span class="load"></span>
+          <span class="load"></span>
+          <span class="load"></span>
+          <span class="load"></span>
+          <span class="entypo-check">&#10004;</span>
+        </label>
+        <label for="poo" >{{ 'survie.diff3' | translate}}</label>
+      
+      </li>
+    </ul>
+
+   
+    <h2>{{'survie.nbjoueur' | translate}}:</h2>
+
+    <input class="classNbJoueur" style="text-align: center" type="number" min="2" max="10" placeholder="{{'survie.inputNbJoueur' | translate}}" (keyup)="getJoueurValue($event)">
+
+    <p style="color: red" *ngIf="erreurJoueur">Erreur: le nombre de joueur doit être compris 2 et 10</p>
+    <h2>{{'survie.inputNbVie' | translate}}:</h2>
+    <input class="classNbVie" style="text-align: center" type="number" min="2" max="10" placeholder="{{'survie.inputNbVie' | translate}}" (keyup)="getVieValue($event)">
+    <p style="color: red" *ngIf="erreurVie">Erreur: le nombre de joueur de vie doit être compris entre 2 et 10</p>
+
+    <button class="button1" *ngIf="toDisplayButton && toDisplayButtonNbJoueur && toDisplayButtonNbVie" (click)="toggleData(); cliquer(); cliquer10()"  >{{'survie.lancer' | translate}}</button>
+  </div>
+ 
+  <div *ngIf="toDisplayBis">
+    <div class="reponse"*ngIf="displayLangFR">Joueur {{numJoueur}} Vie : {{e}}</div>
+    <div class="reponse" *ngIf="displayLangEN">Player {{numJoueur}} Life: {{e}}</div>
+    <h1 *ngIf="displayLangEN">Question </h1>
+    <h1 *ngIf="displayLangFR">Question  </h1>
+    <h2 class="nJoueur" *ngIf="displayLangFR">Joueur {{numJoueur}}</h2>
+    <h2 class="nJoueur" *ngIf="displayLangEN">Joueur {{numJoueur}}</h2>
+     
+    <h3 *ngIf="displayLangFR">{{question.label_fr}}</h3>
+    <h3 *ngIf="displayLangEN">{{question.label_en }}</h3>
+   
+
+    <div class="inline">
+      <button class="button3" (click)="cliquer11(1)" *ngIf="displayLangFR"> {{reponse1.label_fr}}
+      </button>
+      <button class="button3" (click)="cliquer11(1)" *ngIf="displayLangEN"> {{reponse1.label_en}}
+      </button>
+      <button class="button3" (click)="cliquer2(2)" *ngIf="displayLangFR">  {{reponse2.label_fr}}
+      </button>
+      <button class="button3" (click)="cliquer2(2)" *ngIf="displayLangEN"> {{reponse2.label_en}}
+      </button>
+      <button class="button3" (click)="cliquer3(3)" *ngIf="displayLangFR">  {{reponse3.label_fr}}
+      </button>
+      <button class="button3" (click)="cliquer3(3)" *ngIf="displayLangEN"> {{reponse3.label_en}}
+      </button>
+      <button class="button3" (click)="cliquer4(4)" *ngIf="displayLangFR">  {{reponse4.label_fr}}
+      </button>
+      <button class="button3" (click)="cliquer4(4)" *ngIf="displayLangEN"> {{reponse4.label_en}}
+      </button>
+     
+      
+    </div>
+
+    <button class="button2" id="arreter" routerLink="/">{{'survie.arreter' | translate}}</button>
+  
+  </div>
+  <div *ngIf="toDisplayTer">
+    <h1> {{'survie.gagner' | translate}} le joueur gagnant est {{joueurGagnant}} </h1>
+  
+     
+    
+   
+    <button class="button2" id="arreter" routerLink="/">{{'survie.menu' | translate}}</button>
+
+  </div>
+  <div *ngIf="toDisplayCin">
+    <h1>  {{'survie.j' | translate}} {{numJoueur}}  {{'survie.e' | translate}} </h1>
+    <button class="button2"  (click)="retourJeu(); reprise()" >retourner au jeu</button>
+  
+     
+
+   
+    <button class="button2" id="arreter" routerLink="/">{{'survie.menu' | translate}}</button>
+
+  </div>
+  <a id="lien" ngx-translate (click)="changeLanguage()"><img class="flag" id="flag" src="assets/images/{{name}}.png" alt="english.png"></a>
+
+</section>
+<app-footer></app-footer>
